@@ -10,11 +10,19 @@ export class PropostaDeTCCService {
 
   constructor(private http: HttpClient, private auth$: AuthService) { }
 
+  cadastrar(proposta:any){
+    return this.http.post(environment.API_URL.concat('propostas-de-tcc/'), proposta, this.auth$.httpOptions());
+  }
+  
+  lista_publicados() {
+    return this.http.get(environment.API_URL.concat('propostas-de-tcc/'), this.auth$.httpOptions());
+  }
+
   lista() {
     return this.http.get(environment.API_URL.concat('propostas-de-tcc/'), this.auth$.httpOptions());
   }
 
   get(id) {
-    return this.http.get(environment.API_URL.concat(`propostas-de-tcc/${id}/`), this.auth$.httpOptions());
+    return this.http.get(environment.API_URL.concat('propostas-de-tcc/${id}/'), this.auth$.httpOptions());
   }
 }

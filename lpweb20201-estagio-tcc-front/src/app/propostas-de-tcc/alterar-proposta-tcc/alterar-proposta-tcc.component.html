@@ -1,5 +1,11 @@
-<h1>Propostas de TCC</h1>
-<button [routerLink]="['/inicio', 'propostas-de-tcc', 'cadastro-tcc']">Cadastrar Proposta de TCC</button>
+<!-- Alterar/Modificar -->
+<!-- 
+<div class="flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+        <h3>Propostas de TCC</h3> 
+        <a type="button" class="btn btn-success" [routerLink]="['/inicio', 'proposta-de-tcc', 'cadastro']" *ngIf="exibir">Nova Proposta de TCC</a>
+    </div>
+</div>
 <p>A lista a seguir apresenta suas propostas de TCC. Clique em um item da lista para ver mais detalhes.</p>
 
 <div class="list-group" *ngIf="propostas">
@@ -15,6 +21,8 @@
     </a>
 </div>
 
+<!-- 
 <div class="alert alert-info" *ngIf="!propostas">
     <strong>Aguarde</strong>. Carregando...
 </div>
+-->

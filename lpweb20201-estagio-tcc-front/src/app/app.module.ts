@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
 import localePtExtra from '@angular/common/locales/extra/pt';
@@ -16,6 +16,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HomeInicioComponent } from './home-inicio/home-inicio.component';
 import { PropostaDeTCCComponent } from './proposta-de-tcc/proposta-de-tcc.component';
 import { PropostasDeTCCComponent } from './propostas-de-tcc/propostas-de-tcc.component';
+import { ListaDePublicacoesComponent } from './propostas-de-tcc/lista-de-publicacoes/lista-de-publicacoes.component';
+import { CadastroTccComponent } from './propostas-de-tcc/cadastro-tcc/cadastro-tcc.component';
+import { AlterarPropostaTccComponent } from './propostas-de-tcc/alterar-proposta-tcc/alterar-proposta-tcc.component';
 
 registerLocaleData(localePt, 'pt', localePtExtra);
 
@@ -30,11 +33,15 @@ registerLocaleData(localePt, 'pt', localePtExtra);
     InicioComponent,
     HomeInicioComponent,
     PropostaDeTCCComponent,
-    PropostasDeTCCComponent
+    PropostasDeTCCComponent,
+    ListaDePublicacoesComponent,
+    CadastroTccComponent,
+    AlterarPropostaTccComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

@@ -13,7 +13,7 @@ export class PropostasDeTCCComponent implements OnInit {
   constructor(private proposta$: PropostaDeTCCService) { }
 
   ngOnInit(): void {
-    this.proposta$.lista()
+    this.proposta$.lista_publicados()
       .pipe(delay(2000))
       .subscribe(lista => this.propostas = lista);
   }
